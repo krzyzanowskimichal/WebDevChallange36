@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header-bar">
+          <div class="frame">
+            <div class="center">
+              <div id="menu" class="menu-icon" onclick="toggleMenu()">
+                <div class="menu-part menu-part__top"></div>
+                <div class="menu-part menu-part__middle"></div>
+                <div class="menu-part menu-part__bottom"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="logo">
+            <img src="logo.png" alt="logo" />
+          </div>
+          <div class="navbar">
+            <nav class="menu-list">
+              <a href="#" class="active-page">shop</a>
+              <a href="#">home</a>
+              <a href="#">elements</a>
+              <a href="#">journal</a>
+              <a href="#">pages</a>
+            </nav>
+            <div class="cart">
+              <img src="cart.png" alt="cart" />
+              <div class="cart-content hide"></div>
+            </div>
+          </div>
+          <div class="cart-open hide">
+            <!-- <p class="cart-empty">The cart is Empty</p> -->
+            <div class="cart-items-list">
+              <div class="cart-item-element"></div>
+              <div class="cart-summary">
+                <div class="cart-summary-total">
+                  <p class="cart-summary-total-text">Order total:</p>
+                  <p class="cart-summary-total-value">$<span>0</span></p>
+                </div>
+                <button class="cart-summary-checkout">View Bag & Checkout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container slideshow">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide active">
+              <div
+                class="slide1-image"
+                style="background-image: url(https://overweary-defects.000webhostapp.com/img/1.png)"
+              ></div>
+              <div class="slide1-content">
+                <h2 class="slide1-text-primary">Sky Planet</h2>
+                <h3 class="slide1-text-secondary">Shop now</h3>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <div
+                class="slide2-image"
+                style="background-image: url(https://overweary-defects.000webhostapp.com/img/h-11-slide-2.jpg)"
+              ></div>
+              <div class="slide2-content">
+                <h2 class="slide2-text-primary">
+                  Fill your room <br />
+                  with sophistication
+                </h2>
+                <h3 class="slide2-text-secondary">
+                  Lorem ipsum dolor consectetur adipisicing elit. <br />
+                  Laboriosam molestiae officiis asperiores dicta.
+                </h3>
+                <div class="slidex-button-container"><a href="" class="slide2-button">Take a look</a></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <div
+                class="slide2-image"
+                style="background-image: url(https://overweary-defects.000webhostapp.com/img/h11-slide-3.jpg)"
+              ></div>
+              <div class="slide2-content">
+                <h2 class="slide2-text-primary">
+                  Attention to details <br />
+                  is our passion
+                </h2>
+                <h3 class="slide2-text-secondary">
+                  Lorem, ipsum dolor consectetur adipisicing elit <br />
+                  Architecto dolore asperiores molestiae officiis.
+                </h3>
+                <div class="slidex-button-container"><a href="" class="slide2-button">Purchase now</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-counter">
+            <p class="current-slide">1</p>
+            <p class="middle-text">of</p>
+            <p class="slides-number">3</p>
+          </div>
+
+          <div class="slideshow-navigation">
+            <div class="slideshow-navigation-button prev"><span class="fas fa-chevron-left"></span></div>
+            <div class="slideshow-navigation-button next"><span class="fas fa-chevron-right"></span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="main">
+        <div class="aside-container">
+          <button class="aside-button">Show filters</button>
+          <div class="aside-header hide">
+            <p class="aside-header-title">Filters</p>
+            <i class="fas fa-times close-filters"></i>
+          </div>
+          <div class="aside">
+            <div class="categories">
+              <p class="category-title">Categories</p>
+              <ul class="list">
+                <li id="all-products" onclick="reloadPage()">All products<sup>16</sup></li>
+                <li id="living" class="category flag">Living</li>
+                <li id="dining" class="category">Dining</li>
+                <li id="furniture" class="category">Furniture</li>
+                <li id="lighting" class="category">Lighting</li>
+                <li id="technics" class="category">Technics</li>
+                <li id="accesories" class="category">Accesories</li>
+              </ul>
+            </div>
+            <div class="filters">
+              <p class="filter-title">Filter by</p>
+              <div class="price">
+                <p class="filter-name">Price</p>
+
+                <div class="range-slider">
+                  <input value="25" min="0" max="380" step="1" type="range" />
+                  <input value="350" min="0" max="380" step="1" type="range" />
+                  <div class="between"></div>
+                  <br /><br />
+
+                  <div class="price-filters">
+                    <div class="price-tags">
+                      <input type="number" value="25" min="0" max="380" step="1" class="priceMin" />
+                      <input type="number" value="350" min="0" max="380" step="1" class="priceMax" />
+                    </div>
+                    <button class="filter-button">Filter</button>
+                  </div>
+                </div>
+              </div>
+              <p class="filter-name" style="margin-top: 80px">Color</p>
+              <div class="colors">
+                <input type="checkbox" id="grey" class="circle-color color-grey" />
+                <input type="checkbox" id="white" class="circle-color color-white" />
+                <input type="checkbox" id="red" class="circle-color color-red" />
+                <input type="checkbox" id="blue" class="circle-color color-blue" />
+                <input type="checkbox" id="green" class="circle-color color-green" />
+              </div>
+              <div class="mobileContainer">
+                <div class="sizes">
+                  <p class="filter-name">Size</p>
+                  <ul class="list">
+                    <li id="small" class="size">Small</li>
+                    <li id="medium" class="size">Medium</li>
+                    <li id="large" class="size">Large</li>
+                  </ul>
+                </div>
+
+                <div class="brands">
+                  <p class="filter-name">Brands</p>
+                  <ul class="list">
+                    <li id="banshuHamono" class="brand">Banshu Hamono</li>
+                    <li id="bower" class="brand">Bower</li>
+                    <li id="braun" class="brand">Braun</li>
+                    <li id="elevenplus" class="brand">Elevenplus</li>
+                    <li id="field" class="brand">Field</li>
+                    <li id="henryWilson" class="brand">Henry Wilson</li>
+                    <li id="menu" class="brand">Menu</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tags">
+              <p class="category-title">Popular Tags</p>
+              <div class="tags-list">
+                <p>Simple,</p>
+                <p>Minimalism,</p>
+                <p>Furniture,</p>
+                <p>White,</p>
+                <p>Black,</p>
+                <p>Accesories</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="results">
+          <div class="panel">
+            <div class="sort">
+              <label for="sort-by">Sort by:</label>
+              <select id="sort-by">
+                <option value="a-z" selected>A-Z</option>
+                <option value="z-a">Z-A</option>
+                <option value="price-ascending">Price ascending</option>
+                <option value="price-descending">Price descending</option>
+              </select>
+            </div>
+            <div class="results-number">
+              <p class="results-number-text">
+                Showing <span class="results-number-range">1-12</span> of
+                <span class="results-number-all">24</span> results
+              </p>
+            </div>
+          </div>
+          <div class="result-listing"></div>
+          <div class="pagination-section"></div>
+          <div id="pagination" class="pagenumbers"></div>
+        </div>
+      </section>
+      <section class="newsletter">
+        <div class="newsletter-container">
+          <p class="newsletter-text">Get Discount 35% off</p>
+          <div class="newsletter-input">
+            <input type="email" name="" id="" placeholder="Enter your email..." class="newsletter-input-field" />
+            <button class="newsletter-input-button">Send</button>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <p class="copyrights">@ 2017 Maison. All rights reserved</p>
+        <div class="footer-menu">
+          <a href="#">Shop</a>
+          <a href="#">Journal</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+      </section>
+      <div class="snackbar"><span></span> added to Cart</div>
+    </div>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script src="filter.js"></script>
+    <script src="pagination.js"></script>
+  </body>
+</html>
