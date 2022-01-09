@@ -65,7 +65,7 @@ const collectedFilters = {
 // GET DATA
 
 async function getProducts() {
-  let url = "../data.json";
+  let url = "https://github.com/krzyzanowskimichal/WebDevChallange36/data.json";
   try {
     let res = await fetch(url);
     return await res.json();
