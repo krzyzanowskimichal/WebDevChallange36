@@ -3,7 +3,6 @@
 let resultsNumberRange = document.querySelector(".results-number-range");
 let resultsNumberAll = document.querySelector(".results-number-all");
 let addToCartButton;
-// setTimeout(displayList(filterResult,list_element,itemsPerPage,currentPage),1000);
 async function displayList(wrapper, rows_per_page, page) {
   filterResult = await getProducts();
   wrapper.innerHTML = "";
